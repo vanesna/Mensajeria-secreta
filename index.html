@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mensajería secreta</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" type="module"></script>
+  </head>
+  <body>   
+    <div id="root">  
+      <h1>Bienvenido agente 🕵🏻‍♀️</h1> 
+      <form> 
+        <div class="mensaje">
+          <label for="Messaje">Ingresa el mensaje:</label> 
+          <input type="text" id="Messaje" onkeypress="return (event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32)"/> <!-- ascii de la tecla -->
+          <br>
+          <br>
+          <label for="offset">Desplazamiento:</label>
+          <br>
+          <input type="text" id="offset" name="offset" onkeypress=" return (event.charCode >= 48 && event.charCode <= 57)"> 
+        </div>
+      </form> 
+          <br>
+          <div>
+            <button type="button" id="encodeButton" > Codificar </button>
+          </div>
+            <br>
+          <div>
+            <button type="button" id="decodeButton" > Decodificar </button>
+          </div>
+          <div>
+            <p><input type="text" id="mensajeCifrado"></p>
+          </div>           
+      </div>   
+  </body>
+</html>
